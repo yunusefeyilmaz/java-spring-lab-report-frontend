@@ -1,0 +1,39 @@
+.mainMenu {
+  background-color: #007bff; /* Menü arka plan rengi */
+  padding: 10px 0;
+}
+
+.mainMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.mainMenu li {
+  margin-right: 20px; 
+}
+
+.mainMenu a {
+  text-decoration: none;
+  color: #fff; 
+  padding: 20px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.mainMenu a:hover {
+  background-color: #0056b3; 
+}
+
+.logout {
+  background-color: #dc3545; 
+  text-align: right;
+  margin: 0 auto;
+}
+
+.logout  a:hover{
+  background-color: #dc3545; 
+  text-align: right;
+  margin: 0 auto;
+}
