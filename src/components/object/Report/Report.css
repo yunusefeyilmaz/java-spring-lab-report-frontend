@@ -1,0 +1,56 @@
+h1 {
+  margin: 20px;
+}
+
+.reportTableContainer {
+  max-width: 75%;
+  margin: 25px auto 0 auto;
+}
+
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reportTable th,
+.reportTable td {
+  padding: 10px;
+  text-align: left;
+}
+
+.reportTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.reportTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.reportTable tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.button {
+  padding: 8px 12px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.viewButton {
+  background-color: #007bff; /* Mavi */
+}
+
+.editButton {
+  background-color: #28a745; /* Yeşil */
+}
+
+.deleteButton {
+  background-color: #dc3545; /* Kırmızı */
+}
+
+.button:hover {
+  filter: brightness(90%);
+}
