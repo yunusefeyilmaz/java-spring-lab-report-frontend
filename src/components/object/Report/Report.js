@@ -1,8 +1,19 @@
-import "./Report.css";
+import "../../css/button.css";
 
 function Report(props) {
   const { id, fileNumber, image, title, detail, date } = props;
   const imagetext = image ? "Available" : "Not available";
+
+  const deleteHandler = () => {
+    fetch(`/api/reports/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `${localStorage.getItem("token")}`,
+      },
+    }).then(() => {
+      window.location.reload();
+    });
+  }
   return (
     <tr>
       <td>{fileNumber}</td>
@@ -11,15 +22,15 @@ function Report(props) {
       <td>{date}</td>
       <td>{imagetext}</td>
       <td>
-        <button class="viewButton" href={id}>
+        <button className="view-button" onClick={() => window.location.href = `report/${id}`}>
           View
         </button>
       </td>
       <td>
-        <button class="editButton">Edit</button>
+        <button className="edit-button" onClick={() => window.location.href = `report/edit/${id}`}>Edit</button>
       </td>
       <td>
-        <button class="deleteButton">Delete</button>
+        <button className="delete-button" onClick={deleteHandler}>Delete</button>
       </td>
     </tr>
   );
