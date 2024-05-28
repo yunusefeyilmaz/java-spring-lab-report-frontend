@@ -1,0 +1,35 @@
+h1 {
+    margin: 20px;
+  }
+  body {
+    background-color: #f0f2f5; 
+    
+  }
+  .reportTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  .reportTable th, .reportTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; 
+  }
+  .reportTableContainer {
+    max-width: 75%;
+    margin: 25px auto 0 auto;
+  }
+  
+  .reportTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .reportTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .reportTable tbody tr:hover {
+    background-color: #f0f0f0;
+  }
