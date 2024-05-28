@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import "./Menu.css";
 
 function Menu() {
+  const userIsLogged = localStorage.getItem("id");
+
+  if (!userIsLogged) {
+    return null; // Don't render the menu if the user is not logged in
+  }
+
   return (
     <nav class="mainMenu">
       <ul>
