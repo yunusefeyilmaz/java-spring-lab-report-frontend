@@ -107,6 +107,7 @@ function ReportsPage() {
                   title={report.diagnosisTitle}
                   detail={report.diagnosisDetails}
                   date={report.reportDate}
+                  image={report.imageEmpty}
                 ></Report>
               ))}
             </tbody>

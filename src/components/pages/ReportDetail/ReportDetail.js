@@ -8,6 +8,7 @@ function ReportDetailPage() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [report, setReport] = useState({});
+  const [imageSrc, setImageSrc] = useState("");
 
   const { id } = useParams();
   const handleEdit = () => {
@@ -20,6 +21,10 @@ function ReportDetailPage() {
     }
   };
 
+  const convertBase64ToImage = (base64String) => {
+    const image = `data:image/jpeg;base64, ${base64String}`;
+    return image;
+  };
   useEffect(() => {
     fetch(`/api/reports/${id}`, {
       headers: {
@@ -31,6 +36,7 @@ function ReportDetailPage() {
         (result) => {
           setIsLoaded(true);
           setReport(result);
+          setImageSrc(convertBase64ToImage(result.image));
         },
         (error) => {
           setIsLoaded(true);
@@ -71,7 +77,7 @@ function ReportDetailPage() {
         <div className="patient-detail">
           <div className="patient-detail-item">
             <label htmlFor="patient-id">Patient ID</label>
-            <span id="patient-id">{report.patient.patientID}</span>
+            <span id="patient-id">{report.patient.patientId}</span>
           </div>
           <div className="patient-detail-item">
             <label htmlFor="patient-name">Patient Name</label>
@@ -81,7 +87,7 @@ function ReportDetailPage() {
           </div>
         </div>
         <div className="report-image-container">
-          <img id="report-image" src={report.image} alt="Report" />
+          <img id="report-image" src={imageSrc} alt="Report" />
         </div>
       </div>
     );
