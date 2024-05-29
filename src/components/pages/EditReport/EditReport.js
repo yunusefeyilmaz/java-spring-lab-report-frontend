@@ -41,6 +41,7 @@ function EditReportPage() {
   }, [id]);
 
   const handleSave = () => {
+    const base64Image = image.split(",")[1];
     fetch(`/api/reports`, {
       method: "PUT",
       headers: {
@@ -54,8 +55,8 @@ function EditReportPage() {
         diagnosisDetails: detail,
         patient,
         labAssistant: labasistants,
-        image,
-        reportDate: date,
+        image:base64Image,
+        reportDate: date
       }),
     }).then(() => {
       navigate(`/report/${id}`);
@@ -78,7 +79,7 @@ function EditReportPage() {
     setPatient({ ...patient, surname: value });
   };
   const setPatientID = (value) => {
-    setPatient({ ...patient, patientID: value });
+    setPatient({ ...patient, patientId: value });
   };
 
   if (error) {
@@ -114,7 +115,7 @@ function EditReportPage() {
         <input
           type="text"
           id="patientID"
-          value={patient.patientID}
+          value={patient.patientId}
           onChange={(e) => setPatientID(e.target.value)}
         />
         <label htmlFor="name">Patient Name</label>
@@ -132,7 +133,7 @@ function EditReportPage() {
           onChange={(e) => setSurname(e.target.value)}
         />
         <label htmlFor="image">Report Image</label>
-        <input type="file" id="image" onChange={handleImageChange} />
+        <input type="file" id="image" onChange={handleImageChange}  alt="Report"/>
         <label htmlFor="date">Report Date</label>
         <input
           type="date"
