@@ -39,7 +39,7 @@ function PatientDetailPage() {
         <div className="patientInfo">
           <div className="patientDetailItem">
             <label htmlFor="patientID">Patient ID:</label>
-            <span id="patientID">{patient.patientID}</span>
+            <span id="patientID">{patient.patientId}</span>
           </div>
           <div className="patientDetailItem">
             <label htmlFor="name">Name:</label>

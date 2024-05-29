@@ -88,7 +88,7 @@ function PatientsPage() {
                   id={patient.id}
                   name={patient.name}
                   surname={patient.surname}
-                  patientID={patient.patientID}
+                  patientID={patient.patientId}
                   reports={patient.reports}
                 ></Patient>
               ))}
