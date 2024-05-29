@@ -1,34 +1,53 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CreateReportPage.css";
 
 function CreateReportPage() {
   const [fileNumber, setFileNumber] = useState("");
   const [title, setTitle] = useState("");
   const [detail, setDetail] = useState("");
-  const [reports, setReports] = useState([]);
   const [patientID, setPatientID] = useState("");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [image, setImage] = useState("");
+  const navigate = useNavigate();
+
+  const checkPatientID = () => {
+    if (patientID.length === 11) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   function addReport() {
+    const base64Image = image.split(",")[1];
+    if(!checkPatientID()){
+      document.querySelector(".success").innerHTML = "Patient ID must be 11 characters";
+      return;
+    }
     fetch("/api/reports", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         fileNumber: fileNumber,
-        title: title,
-        detail: detail,
-        date: new Date().toISOString().slice(0, 10),
+        patient: {
+          
+          patientId: patientID,
+          name: name,
+          surname: surname,
+        },
+        labAssistant: {},
+        diagnosisTitle: title,
+        diagnosisDetails: detail,
+        reportDate: new Date().toISOString().slice(0, 10),
+        image:base64Image,
       }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-       
-      });
+    }).then(navigate("/reports"));
   }
 
   return (
