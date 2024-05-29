@@ -2,7 +2,7 @@ import "../../css/button.css";
 
 function Report(props) {
   const { id, fileNumber, image, title, detail, date } = props;
-  const imagetext = image ? "Available" : "Not available";
+  const imagetext = !image ? "Available" : "Not available";
 
   const deleteHandler = () => {
     fetch(`/api/reports/${id}`, {
