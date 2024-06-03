@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# java-spring-lab-report-frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+This project is the frontend application of the Lab Report System. It provides a user interface for managing patients, lab reports, and lab assistants. The frontend is built using React, and it communicates with the backend API to perform various operations.
 
-In the project directory, you can run:
+## Usage
 
-### `npm start`
+To use the Lab Report System frontend, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Navigate to the <a href="https://github.com/yunusefeyilmaz/java-spring-lab-report">backend repository</a>.
+- Follow the installation instructions provided in the backend <a href="https://github.com/yunusefeyilmaz/java-spring-lab-report/blob/master/README.md">README</a>.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+### Home Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/53ee8012-c681-4984-ae43-47e575c150c5" alt="Home Page" width="600">
+  
+### Login Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/617c4b05-ca0c-4017-867b-9f716ea1a44f" alt="Login Page" width="600">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Register Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/39c1d125-b355-4198-94a6-a9a4ff89abcb" alt="Register Page" width="600">
+  
+### Reports Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/bcd9479d-fbb9-4978-acfc-7b00d7489fe5" alt="Reports Page" width="600">
 
-### `npm run build`
+### Report Detail Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/48538272-07fe-44b6-8e52-3cddc63d3224" alt="Report Detail Page" width="600">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Create Report Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/f4b9a419-9e96-4983-9d15-1794203609ad" alt="Create Report Page" width="600">
+  
+### Edit Report Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/580a694b-7f52-415c-aed1-321c3ec92add" alt="Edit Report Page" width="600">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Patients Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/eb4e2561-8aac-4299-beb8-314d1e6492a4" alt="Patients Page" width="600">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Patient Detail Page
+  <img src="https://github.com/yunusefeyilmaz/java-spring-lab-report-frontend/assets/89478740/1b08d06c-d021-470c-8b80-b8a685996397" alt="Patient Detail Page" width="600">
+  
